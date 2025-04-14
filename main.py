@@ -15,12 +15,16 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
+
+        player.update(dt)
         # this is the same as below but passing actual RGB values 
         # screen.fill((0,0,0))
         screen.fill("black")
         player.draw(screen)
         # flip is basically a blit from the backbuffer to the front buffer
         pygame.display.flip()
+
+        # limit the framerate to 60 FPS
         dt = clock.tick(60) / 1000
 
 
