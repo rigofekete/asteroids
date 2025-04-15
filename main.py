@@ -1,6 +1,8 @@
 import pygame
 from constants import *
 from player import Player
+from asteroid import Asteroid
+from asteroidfield import AsteroidField
 
 def main():
     pygame.init()
@@ -12,13 +14,17 @@ def main():
     #These are empty to begin with, but they are now ready to hold objects.
     updatable = pygame.sprite.Group()
     drawable = pygame.sprite.Group()
+    asteroids = pygame.sprite.Group()
     # This sets a static field member in the Player class 
     # Defines that any instance of the Player class will automatically be added to both the updatable and drawable groups when it's created. 
     Player.containers = (updatable, drawable)
+    Asteroid.containers = (updatable, drawable, asteroids)
+    AsteroidField.containers = (updatable)
     
     x = SCREEN_WIDTH / 2
     y = SCREEN_HEIGHT / 2
     player = Player(x, y)
+    asteroid_field = AsteroidField()
 
     while True:
         for event in pygame.event.get():
@@ -30,7 +36,7 @@ def main():
         # this is the same as below but passing actual RGB values 
         # screen.fill((0,0,0))
         screen.fill("black")
-        
+    
         for obj in drawable:
             obj.draw(screen)
 
