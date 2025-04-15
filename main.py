@@ -4,6 +4,7 @@ from constants import *
 from player import Player
 from asteroid import Asteroid
 from asteroidfield import AsteroidField
+from shot import Shot
 
 def main():
     pygame.init()
@@ -16,11 +17,14 @@ def main():
     updatable = pygame.sprite.Group()
     drawable = pygame.sprite.Group()
     asteroids = pygame.sprite.Group()
+    shots = pygame.sprite.Group()
     # This sets a static field member in the Player class 
     # Defines that any instance of the Player class will automatically be added to both the updatable and drawable groups when it's created. 
-    Player.containers = (updatable, drawable)
     Asteroid.containers = (updatable, drawable, asteroids)
     AsteroidField.containers = updatable
+    Shot.containers = (updatable, drawable, shots)
+
+    Player.containers = (updatable, drawable)
     
     x = SCREEN_WIDTH / 2
     y = SCREEN_HEIGHT / 2
@@ -38,6 +42,11 @@ def main():
             if asteroid.is_colliding(player):
                 print("GAME OVER")
                 sys.exit()
+
+            for shot in shots:
+                if asteroid.is_colliding(shot):
+                    asteroid.split()
+                    shot.kill()
             
         # this is the same as below but passing actual RGB values 
         # screen.fill((0,0,0))
