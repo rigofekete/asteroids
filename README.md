@@ -9,8 +9,6 @@
 This project is a **learning prototype / proof of concept** inspired by the classic Asteroids arcade game.  
 It includes basic spaceship movement, shooting, and asteroid collisions.  
 
-⚠️ Expect **rough edges, placeholder art, and minimal polish** — this is a work-in-progress demo rather than a full game.
-
 ---
 
 ## 📺 Demo
@@ -23,7 +21,6 @@ It includes basic spaceship movement, shooting, and asteroid collisions.
 
 - Ship movement and basic firing  
 - Asteroid spawning and simple collision detection  
-- Basic score counter *(if implemented)*  
 
 ---
 
