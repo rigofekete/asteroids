@@ -14,7 +14,7 @@ It includes basic spaceship movement, shooting, and asteroid collisions.
 ---
 
 ## 📺 Demo
-![Application Demo](![Image](https://github.com/user-attachments/assets/5862ec87-76e4-47da-ac5f-0c36afe4d276))
+![Application Demo](![Image](https://github.com/user-attachments/assets/5862ec87-76e4-47da-ac5f-0c36afe4d276)
 
 
 ---
