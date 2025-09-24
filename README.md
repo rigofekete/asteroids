@@ -4,7 +4,7 @@
 
 ---
 
-## 📌 Description
+## Description
 
 This project is a **learning prototype / proof of concept** inspired by the classic Asteroids arcade game.  
 It includes basic spaceship movement, shooting, and asteroid collisions.  
@@ -17,14 +17,14 @@ It includes basic spaceship movement, shooting, and asteroid collisions.
 
 ---
 
-## ✨ Current Features
+## Current Features
 
 - Ship movement and basic firing  
 - Asteroid spawning and simple collision detection  
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - Python 3.x  
 - Pygame  
